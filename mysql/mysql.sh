@@ -2,6 +2,7 @@ docker stop zili_mysql
 docker rm zili_mysql
 docker run -p 3306:3306 \
 --name zili_mysql \
+--privileged=true \
 -v $PWD/data:/var/lib/mysql \
 -v $PWD/conf/my.cnf:/etc/mysql/my.cnf  \
 -e MYSQL_ROOT_PASSWORD=123qweASD \
